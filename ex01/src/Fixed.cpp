@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: elvictor <elvictor@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/27 14:15:33 by elvictor          #+#    #+#             */
+/*   Updated: 2026/03/27 14:15:33 by elvictor         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 
 Fixed::Fixed() : _value(0) {
@@ -18,7 +30,7 @@ Fixed::Fixed(const float f)
 
 Fixed::Fixed(const Fixed& other) {
     std::cout << "Copy constructor called" << std::endl;
-    this->_value = other.getRawBits();
+    *this = other;
 }
 
 Fixed& Fixed::operator=(const Fixed& other) {
